@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "name": "John Doe",
+      "profile_picture": "images/john.jpg",
+      "lastMessage": "Hey, how are you?",
+      "messages": [
+        {
+          "sender": "John Doe",
+          "message": "Hey, how are you?",
+          "timestamp": "2024-10-18 10:15"
+        },
+        {
+          "sender": "Me",
+          "message": "I'm good, thanks! How about you?",
+          "timestamp": "2024-10-18 10:16"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "profile_picture": "images/jane.jpg",
+      "lastMessage": "See you at the meeting.",
+      "messages": [
+        {
+          "sender": "Jane Smith",
+          "message": "See you at the meeting.",
+          "timestamp": "2024-10-18 09:30"
+        },
+        {
+          "sender": "Me",
+          "message": "Sure, looking forward to it!",
+          "timestamp": "2024-10-18 09:35"
+        }
+      ]
+    }
+  ]
+  

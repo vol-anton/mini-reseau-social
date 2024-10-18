@@ -1,15 +1,25 @@
 [
     {
       "id": 1,
-      "text": "First post",
+      "text": "This is the first post",
       "image": "assets/image1.jpg",
-      "reactions": { "like": 10, "dislike": 1, "love": 3 }
+      "reactions": { "like": 10, "dislike": 2, "love": 5 },
+      "comments": [
+        {
+          "id": 1,
+          "text": "Great post!",
+          "replies": [
+            { "id": 1, "text": "Thanks!" }
+          ]
+        }
+      ]
     },
     {
       "id": 2,
-      "text": "Second post",
+      "text": "Another great day!",
       "image": "assets/image2.jpg",
-      "reactions": { "like": 5, "dislike": 0, "love": 1 }
+      "reactions": { "like": 5, "dislike": 1, "love": 10 },
+      "comments": []
     }
   ]
   
