@@ -190,23 +190,3 @@ fetch("data/posts.json")
     });
   })
   .catch((err) => console.error("Error fetching posts:", err));
-
-
-
-
-// CONVERSATIONS
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("data/conversations.json")
-    .then((response) => response.json())
-    .then((conversations) => {
-      const container = document.getElementById("conversations-container");
-      conversations.forEach((conv) => {
-        const convDiv = document.createElement("div");
-        convDiv.className = "conversation";
-        convDiv.innerHTML = `
-        <p><strong>${conv.name}</strong>: ${conv.lastMessage}</p>
-        `;
-        container.appendChild(convDiv);
-      });
-    });
-});

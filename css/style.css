@@ -12,10 +12,89 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   min-height: 100vh;
 }
+
+/* NAVBAR STYLES */
+.navbar {
+  background-color: #e0e0e0;
+  padding: 30px 20px;
+  box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 20px; /* SPACE BETWEEN THE LINKS */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-list li a:hover {
+  background-color: #f0f0f0;
+  box-shadow: 3px 3px 10px #bebebe, -3px -3px 10px #ffffff;
+}
+
+.nav-list li a:active {
+  box-shadow: inset 5px 5px 15px #bebebe, inset -5px -5px 15px #ffffff;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .nav-list {
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+  
+    .navbar {
+      justify-content: flex-start;
+      padding: 15px;
+      display: block;
+    }
+  
+    .nav-list li a {
+      font-size: 14px; 
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav-list {
+      flex-direction: column;
+    }
+  
+    .nav-list li a {
+      font-size: 12px;
+      padding: 8px 15px;
+    }
+  }
 
 /* FEED PAGE */
 #feed {
@@ -201,4 +280,96 @@ button:hover {
   outline: none;
   box-shadow: inset 3px 3px 10px #bebebe, inset -3px -3px 10px #ffffff;
   background: #f0f0f0;
+}
+
+/* MESSAGING PAGE STYLES */
+#messaging {
+  width: 80%;
+  max-width: 800px;
+  background: #e0e0e0;
+  border-radius: 20px;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  padding: 20px;
+}
+
+#conversations-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.conversation {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#conversation-details {
+  background: #e0e0e0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
+}
+
+.hidden {
+  display: none;
+}
+
+/* MESSAGE HISTORY STYLES */
+#message-history {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.message {
+  background: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px #bebebe, -3px -3px 10px #ffffff;
+}
+
+/* MESSAGE INPUT STYLES */
+#message-input {
+  display: flex;
+  gap: 10px;
+}
+
+#new-message {
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: inset 5px 5px 15px #bebebe, inset -5px -5px 15px #ffffff;
+  border: none;
+}
+
+#send-message {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+  color: #232323;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+#send-message:hover {
+  box-shadow: inset 5px 5px 15px #cce7ff, inset -5px -5px 15px #ffffff;
+}
+
+/* PROFILE IMAGE STYLING */
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 3px 3px 10px #bebebe, -3px -3px 10px #ffffff;
+  margin-right: 20px;
 }
