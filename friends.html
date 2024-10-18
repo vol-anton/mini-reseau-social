@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friends List</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- nav -->
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="index.html">Feed</a></li>
+      <li><a href="messaging.html">Messaging</a></li>
+      <li><a href="friends.html">Friends List</a></li>
+    </ul>
+  </nav>
+
+  <!-- friends list section -->
+  <div id="friends-list">
+    <h1>Friends List</h1>
+    <input type="text" id="search-friends" placeholder="Search friends..." />
+    
+    <ul id="friends-container">
+      <li class="friend" draggable="true">
+        <img src="assets/jean.jpg" alt="profile-img" class="friend-pic" />
+        <p class="friend-name">Jean Dupont</p>
+        <a href="messaging.html" class="message-link">Message</a>
+      </li>
+      <li class="friend" draggable="true">
+        <img src="assets/jeanne.jpg" alt="profile-img" class="friend-pic" />
+        <p class="friend-name">Jeanne Martin</p>
+        <a href="messaging.html" class="message-link">Message</a>
+      </li>
+      <li class="friend" draggable="true">
+        <img src="assets/alex.jpg" alt="profile-img" class="friend-pic" />
+        <p class="friend-name">Alexandre Brun</p>
+        <a href="messaging.html" class="message-link">Message</a>
+      </li>
+    </ul>
+  </div>
+
+  <script src="js/friends.js"></script>
+</body>
+</html>

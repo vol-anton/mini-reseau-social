@@ -64,37 +64,36 @@ body {
   box-shadow: inset 5px 5px 15px #bebebe, inset -5px -5px 15px #ffffff;
 }
 
-
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE DESIGN FOR NAV */
 @media (max-width: 768px) {
-    .nav-list {
-      flex-direction: column;
-      gap: 30px;
-      align-items: center;
-    }
-  
-    .navbar {
-      justify-content: flex-start;
-      padding: 15px;
-      display: block;
-    }
-  
-    .nav-list li a {
-      font-size: 14px; 
-      padding: 10px 20px;
-    }
+  .nav-list {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
   }
-  
-  @media (max-width: 480px) {
-    .nav-list {
-      flex-direction: column;
-    }
-  
-    .nav-list li a {
-      font-size: 12px;
-      padding: 8px 15px;
-    }
+
+  .navbar {
+    justify-content: flex-start;
+    padding: 15px;
+    display: block;
   }
+
+  .nav-list li a {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-list li a {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
 
 /* FEED PAGE */
 #feed {
@@ -131,7 +130,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 5;
 }
 
 .full-screen img {
@@ -189,6 +188,31 @@ button:hover {
 
 .post img:hover {
   transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  #feed {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .post {
+    padding: 10px;
+  }
+
+  .post img {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
 }
 
 /* GENERAL PARTICLE STYLES */
@@ -372,4 +396,139 @@ button:hover {
   object-fit: cover;
   box-shadow: 3px 3px 10px #bebebe, -3px -3px 10px #ffffff;
   margin-right: 20px;
+}
+
+/* FRIENDS LIST PAGE */
+#friends-list {
+  width: 80%;
+  max-width: 800px;
+  background: #e0e0e0;
+  border-radius: 20px;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  padding: 20px;
+}
+
+#search-friends {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: inset 5px 5px 15px #bebebe, inset -5px -5px 15px #ffffff;
+  border: none;
+  margin-bottom: 20px;
+}
+
+#friends-container {
+  list-style-type: none;
+  padding: 0;
+}
+
+.friend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #e0e0e0;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
+  cursor: move;
+}
+
+.friend:hover {
+  background-color: #f0f0f0;
+}
+
+.friend-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.friend-name {
+  flex: 1;
+}
+
+.message-link {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+  color: #232323;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.message-link:hover {
+  box-shadow: inset 5px 5px 15px #cce7ff, inset -5px -5px 15px #ffffff;
+}
+
+.message-link:active {
+  box-shadow: inset 5px 5px 15px #bebebe, inset -5px -5px 15px #ffffff;
+}
+
+@media (max-width: 768px) {
+  #friends-list {
+    width: 90%;
+  }
+
+  .friend {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  .friend-pic {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .friend-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .message-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  #search-friends {
+    width: 90%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  #friends-list {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .friend {
+    padding: 15px;
+  }
+
+  .friend-pic {
+    width: 50px;
+    height: 50px;
+  }
+
+  .friend-name {
+    font-size: 16px;
+  }
+
+  .message-link {
+    padding: 8px 15px;
+  }
+
+  #search-friends {
+    width: 100%;
+    padding: 10px;
+  }
 }
