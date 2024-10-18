@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "text": "First post",
+      "image": "assets/image1.jpg",
+      "reactions": { "like": 10, "dislike": 1, "love": 3 }
+    },
+    {
+      "id": 2,
+      "text": "Second post",
+      "image": "assets/image2.jpg",
+      "reactions": { "like": 5, "dislike": 0, "love": 1 }
+    }
+  ]
+  

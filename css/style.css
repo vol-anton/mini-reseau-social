@@ -1,0 +1,88 @@
+/* Global reset for box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: monospace;
+
+}
+
+/* Global Styles */
+body {
+  background-color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Feed Layout */
+#feed {
+  width: 80%;
+  max-width: 800px;
+  background: #e0e0e0;
+  border-radius: 20px;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  padding: 20px;
+}
+
+/* Post Container */
+.post {
+  background: #e0e0e0;
+  box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+/* Button Styling */
+button {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+button:active {
+  box-shadow: inset 5px 5px 15px #bebebe, inset -5px -5px 15px #ffffff;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+  box-shadow: 3px 3px 10px #bebebe, -3px -3px 10px #ffffff;
+}
+
+/* Reaction Button Hover */
+.like-btn:hover {
+  background-color: #cce7ff;
+}
+
+.dislike-btn:hover {
+  background-color: #ffcccc;
+}
+
+.love-btn:hover {
+  background-color: #ffe6cc;
+}
+
+/* Image Styling */
+.post img {
+  width: 60%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
+  margin: 10px 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.post img:hover {
+  transform: scale(1.05);
+}
